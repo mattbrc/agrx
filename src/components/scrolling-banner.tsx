@@ -11,8 +11,8 @@ export function ScrollingBanner() {
   const content = (
     <>
       {items.map((item, i) => (
-        <span key={i} className="mx-8 text-sm font-normal whitespace-nowrap">
-          ✦<span className="ml-8">{item}</span>
+        <span key={i} className="mx-6 text-sm font-normal whitespace-nowrap">
+          ✦<span className="ml-3">{item}</span>
         </span>
       ))}
     </>
