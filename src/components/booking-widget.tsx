@@ -3,6 +3,7 @@
 import { Button } from "@/components/ui/button";
 import { type VariantProps } from "class-variance-authority";
 import { buttonVariants } from "@/components/ui/button";
+import { cn } from "@/lib/utils";
 
 const CLINIC_ID = 16;
 
@@ -27,7 +28,7 @@ export function BookingWidget({
     <Button
       variant={variant}
       size={size}
-      className={className}
+      className={cn("hover:cursor-pointer", className)}
       onClick={() => {
         if (window.launchEmrgWidget) {
           window.launchEmrgWidget(CLINIC_ID);

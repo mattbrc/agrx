@@ -51,13 +51,12 @@ export default function Home() {
         <div className="absolute inset-0 bg-black/40 md:bg-black/20" />
         <div className="relative z-10 mx-auto max-w-4xl text-center [text-shadow:_0_2px_12px_rgb(0_0_0_/_40%)]">
           <h1 className="font-heading mb-6 text-4xl font-bold italic tracking-tight text-white sm:text-5xl lg:text-6xl">
-            Your Partner in{" "}
-            <span className="text-accent">Health & Wellness</span>
+            Stop Managing Decline.{" "}
+            <span className="text-accent">Start Reversing It.</span>
           </h1>
           <p className="mx-auto mb-8 max-w-2xl text-lg text-white/90">
-            Experience personalized healthcare designed around you. Our team of
-            experts is dedicated to helping you achieve optimal health and
-            well-being.
+            Testosterone optimization, peptide protocols, and weight management
+            designed for men who aren&apos;t done yet.
           </p>
           <div className="flex flex-col items-center gap-4 sm:flex-row sm:justify-center">
             <BookingWidget size="lg" />
@@ -79,8 +78,22 @@ export default function Home() {
           <h2 className="text-foreground mb-12 text-center text-3xl font-bold sm:text-4xl">
             Our Services
           </h2>
-          <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
+          <div className="flex flex-wrap justify-center gap-6">
             {[
+              {
+                title: "Testosterone Therapy",
+                description: "Physician-supervised",
+                highlight: "testosterone optimization",
+                descriptionEnd: " to restore energy, strength, and drive.",
+                image: "/ski.JPG",
+              },
+              {
+                title: "Peptide Therapy",
+                description: "Targeted",
+                highlight: "peptide protocols",
+                descriptionEnd: " for recovery, performance, and longevity.",
+                image: "/cycle-performance.JPG",
+              },
               {
                 title: "Weight Management",
                 description:
@@ -89,45 +102,23 @@ export default function Home() {
                 image: "/female-mountain-runner.JPG",
               },
               {
-                title: "Testosterone Therapy",
-                description: "Natural supplements boost hormones and",
-                highlight: "testosterone ",
-                descriptionEnd: "production.",
-                image: "/ski.JPG",
-              },
-              {
-                title: "Peptide Therapy",
-                highlight: "Peptides",
-                description:
-                  "enhance wellness: anti-aging, strength, energy, and sleep.",
-                highlightFirst: true,
-                image: "/cycle-performance.JPG",
-              },
-              {
-                title: "Hormone Therapy",
-                description: "Bioidentical",
-                highlight: "hormone therapy",
-                descriptionEnd: " for menopause symptom relief and balance.",
-                image: "/horse-bw.png",
-              },
-              {
-                title: "Virtual Primary Care",
-                description: "Convenient online visits for",
-                highlight: "personalized medical care",
-                descriptionEnd: " and wellness support.",
-                image: "/grass-bw.png",
-              },
-              {
                 title: "Sexual Wellness",
                 description: "Custom medications to enhance and improve",
                 highlight: "sexual health",
                 descriptionEnd: ", endurance, and libido.",
                 image: "/lion-bw.png",
               },
+              {
+                title: "Virtual Primary Care",
+                description: "Convenient online visits for",
+                highlight: "ongoing care",
+                descriptionEnd: " and medication management.",
+                image: "/grass-bw.png",
+              },
             ].map((service) => (
               <div
                 key={service.title}
-                className="group relative h-[500px] overflow-hidden rounded-2xl bg-zinc-200"
+                className="group relative h-[500px] w-full overflow-hidden rounded-2xl bg-zinc-200 md:w-[calc(50%-12px)] lg:w-[calc(33.333%-16px)]"
               >
                 <img
                   src={service.image}
@@ -140,22 +131,11 @@ export default function Home() {
                     {service.title}
                   </h3>
                   <p className="mb-4 text-white/90">
-                    {service.highlightFirst ? (
-                      <>
-                        <span className="text-primary font-medium">
-                          {service.highlight}
-                        </span>{" "}
-                        {service.description}
-                      </>
-                    ) : (
-                      <>
-                        {service.description}{" "}
-                        <span className="text-primary font-medium">
-                          {service.highlight}
-                        </span>
-                        {service.descriptionEnd}
-                      </>
-                    )}
+                    {service.description}{" "}
+                    <span className="text-primary font-medium">
+                      {service.highlight}
+                    </span>
+                    {service.descriptionEnd}
                   </p>
                   <BookingWidget size="sm" buttonText="Book Now →" />
                 </div>
@@ -172,13 +152,10 @@ export default function Home() {
             <p className="text-primary mb-4 text-sm font-semibold uppercase tracking-widest">
               How It Works
             </p>
-            <h2 className="text-foreground text-3xl font-bold sm:text-4xl">
-              Begin Your Journey In
-            </h2>
-            <div className="relative mt-2 inline-block">
-              <span className="text-primary text-3xl font-bold sm:text-4xl">
-                3 Easy Steps
-              </span>
+            <div className="relative inline-block">
+              <h2 className="text-foreground text-3xl font-bold sm:text-4xl">
+                3 Steps to Get Started
+              </h2>
               <svg
                 className="absolute -bottom-2 left-0 w-full"
                 height="8"
@@ -210,19 +187,19 @@ export default function Home() {
                 step: 1,
                 title: "Book Your Consultation",
                 description:
-                  "No Hidden Fees – Our virtual consultations and follow-up check-ins, conducted by a licensed medical professional, are 100% complimentary.",
+                  "Schedule a free virtual consultation with a licensed provider. No surprise fees, no commitments.",
               },
               {
                 step: 2,
                 title: "Meet With Your Provider",
                 description:
-                  "Meet with your board certified provider to craft your personal, customized treatment plan for your unique health needs.",
+                  "Connect virtually with a board-certified provider who builds a custom protocol based on your labs, goals, and lifestyle.",
               },
               {
                 step: 3,
-                title: "Get Prescriptions Delivered",
+                title: "Get Your Prescriptions Delivered",
                 description:
-                  "Experience the ultimate convenience of having your prescriptions delivered right to your doorstep.",
+                  "Your medications ship directly to your door from US-licensed pharmacies. Refills and follow-ups handled online.",
               },
             ].map((item) => (
               <div key={item.step} className="text-center">
@@ -245,46 +222,12 @@ export default function Home() {
         </div>
       </section>
 
-      {/* About Section */}
-      <section id="about" className="bg-muted/50 px-6 py-24">
-        <div className="mx-auto grid max-w-6xl items-center gap-12 lg:grid-cols-2">
-          <div>
-            <h2 className="text-foreground mb-6 text-3xl font-bold sm:text-4xl">
-              Our Mission
-            </h2>
-            <p className="text-muted-foreground mb-4 text-lg">
-              As a modern telehealth company, you won&apos;t have to go out of
-              your way to see a doctor. You can get real prescriptions from a
-              licensed physician from the comfort of your own home.
-            </p>
-            <p className="text-muted-foreground mb-8 text-lg">
-              By providing an elite patient experience with our board-certified
-              physicians and practitioners, delivering the highest quality
-              research-based medicine, and striving to focus on preventative
-              health and total wellness, at AG Rx, our mission is to guide you
-              in your own transformation, as you achieve the ultimate results
-              you desire.
-            </p>
-            <Button asChild>
-              <a href="#contact">Our Providers</a>
-            </Button>
-          </div>
-          <div className="hidden lg:block">
-            <img
-              src="/female-run.JPG"
-              alt="Woman running at sunset"
-              className="h-[750px] w-full rounded-2xl object-cover object-bottom"
-            />
-          </div>
-        </div>
-      </section>
-
       {/* Licensed States Section */}
-      <section className="px-6 py-24">
+      <section className="bg-muted/50 px-6 py-24">
         <div className="mx-auto grid max-w-6xl items-center gap-12 lg:grid-cols-2">
           <div>
             <Image
-              src="/licensed-states-2.jpeg"
+              src="/states-transparent.png"
               alt="Map showing 44 licensed states"
               width={600}
               height={400}
@@ -304,8 +247,8 @@ export default function Home() {
             </h2>
             <p className="text-muted-foreground mb-6 text-lg">
               Our board-certified providers are licensed to practice
-              telemedicine across 44 states, bringing expert healthcare directly
-              to you.
+              telemedicine across 44 states, bringing expert care directly to
+              you.
             </p>
             <ul className="mb-8 space-y-3">
               <li className="flex items-center gap-3">
@@ -327,8 +270,120 @@ export default function Home() {
                 </span>
               </li>
             </ul>
-            <BookingWidget buttonText="Meet with a provider in my state" />
+            <BookingWidget buttonText="Meet With a Provider in My State" />
           </div>
+        </div>
+      </section>
+
+      {/* Why AG Rx Section */}
+      <section id="about" className="px-6 py-24">
+        <div className="mx-auto grid max-w-6xl items-center gap-12 lg:grid-cols-2">
+          <div>
+            <h2 className="text-foreground mb-6 text-3xl font-bold sm:text-4xl">
+              Why AG Rx?
+            </h2>
+            <p className="text-muted-foreground mb-6 text-lg">
+              We&apos;re not another telehealth startup pushing pills through a
+              chatbot. AG Rx was built for men who take performance seriously
+              and expect their healthcare to keep up.
+            </p>
+            <ul className="mb-8 space-y-3">
+              <li className="flex items-center gap-3">
+                <span className="bg-primary h-2 w-2 rounded-full" />
+                <span className="text-muted-foreground">
+                  Providers who understand optimization, not just symptom
+                  management
+                </span>
+              </li>
+              <li className="flex items-center gap-3">
+                <span className="bg-primary h-2 w-2 rounded-full" />
+                <span className="text-muted-foreground">
+                  Transparent cash-pay pricing with no insurance games
+                </span>
+              </li>
+              <li className="flex items-center gap-3">
+                <span className="bg-primary h-2 w-2 rounded-full" />
+                <span className="text-muted-foreground">
+                  Backed by a licensed provider network across 44 states
+                </span>
+              </li>
+              <li className="flex items-center gap-3">
+                <span className="bg-primary h-2 w-2 rounded-full" />
+                <span className="text-muted-foreground">
+                  Real protocols from US-licensed pharmacies - no grey market,
+                  no guesswork
+                </span>
+              </li>
+              <li className="flex items-center gap-3">
+                <span className="bg-primary h-2 w-2 rounded-full" />
+                <span className="text-muted-foreground">
+                  Ongoing support, not just a one-time script
+                </span>
+              </li>
+            </ul>
+            <Button asChild>
+              <a href="#contact">Our Providers</a>
+            </Button>
+          </div>
+          <div className="hidden lg:block">
+            <img
+              src="/female-run.JPG"
+              alt="Athletic performance"
+              className="h-[750px] w-full rounded-2xl object-cover object-bottom"
+            />
+          </div>
+        </div>
+      </section>
+
+      {/* Who This Is For Section */}
+      <section className="bg-muted/50 px-6 py-24">
+        <div className="mx-auto max-w-4xl text-center">
+          <h2 className="text-foreground mb-6 text-3xl font-bold sm:text-4xl">
+            Who This Is For
+          </h2>
+          <p className="text-muted-foreground mx-auto mb-8 max-w-2xl text-lg">
+            AG Rx isn&apos;t for everyone. It&apos;s for men who&apos;ve been
+            putting in the work and want their biology to stop fighting them.
+          </p>
+          <ul className="mb-8 space-y-4 text-left sm:mx-auto sm:max-w-xl">
+            <li className="flex items-start gap-3">
+              <span className="bg-primary mt-2 h-2 w-2 shrink-0 rounded-full" />
+              <span className="text-muted-foreground">
+                Veterans and active duty who refuse to let age dictate their
+                limits
+              </span>
+            </li>
+            <li className="flex items-start gap-3">
+              <span className="bg-primary mt-2 h-2 w-2 shrink-0 rounded-full" />
+              <span className="text-muted-foreground">
+                First responders staying sharp on and off the job
+              </span>
+            </li>
+            <li className="flex items-start gap-3">
+              <span className="bg-primary mt-2 h-2 w-2 shrink-0 rounded-full" />
+              <span className="text-muted-foreground">
+                Athletes and lifters who&apos;ve hit a wall despite doing
+                everything right
+              </span>
+            </li>
+            <li className="flex items-start gap-3">
+              <span className="bg-primary mt-2 h-2 w-2 shrink-0 rounded-full" />
+              <span className="text-muted-foreground">
+                Professionals who need sustained energy, focus, and drive
+              </span>
+            </li>
+            <li className="flex items-start gap-3">
+              <span className="bg-primary mt-2 h-2 w-2 shrink-0 rounded-full" />
+              <span className="text-muted-foreground">
+                Men who aren&apos;t done yet and aren&apos;t interested in
+                &quot;managing decline&quot;
+              </span>
+            </li>
+          </ul>
+          <p className="text-foreground mb-8 text-lg font-medium">
+            If that sounds like you, we should talk.
+          </p>
+          <BookingWidget size="lg" buttonText="Book Your Consultation" />
         </div>
       </section>
 
@@ -339,10 +394,13 @@ export default function Home() {
             Ready to Get Started?
           </h2>
           <p className="text-primary-foreground/80 mb-8">
-            Book your appointment today and take the first step toward better
-            health.
+            You&apos;ve put in the work. Now get the support to match it.
           </p>
-          <BookingWidget variant="secondary" size="lg" />
+          <BookingWidget
+            variant="secondary"
+            size="lg"
+            buttonText="Book Appointment"
+          />
         </div>
       </section>
 
@@ -355,7 +413,7 @@ export default function Home() {
             <div className="text-center md:text-left">
               <span className="text-primary text-2xl font-bold">AG Rx</span>
               <p className="text-muted-foreground mt-3 text-sm">
-                Your trusted partner in personalized healthcare and wellness.
+                Performance medicine for men who aren&apos;t done yet.
               </p>
             </div>
 
