@@ -52,7 +52,7 @@ export default function Home() {
         <div className="relative z-10 mx-auto max-w-4xl text-center [text-shadow:_0_2px_12px_rgb(0_0_0_/_40%)]">
           <h1 className="font-heading mb-6 text-4xl font-bold italic tracking-tight text-white sm:text-5xl lg:text-6xl">
             Stop Managing Decline.{" "}
-            <span className="text-accent">Start Reversing It.</span>
+            <span className="text-primary-light">Start Reversing It.</span>
           </h1>
           <p className="mx-auto mb-8 max-w-2xl text-lg text-white/90">
             Testosterone optimization, peptide protocols, and weight management
@@ -118,7 +118,7 @@ export default function Home() {
             ].map((service) => (
               <div
                 key={service.title}
-                className="group relative h-[500px] w-full overflow-hidden rounded-2xl bg-zinc-200 md:w-[calc(50%-12px)] lg:w-[calc(33.333%-16px)]"
+                className="group relative h-[500px] w-full overflow-hidden rounded-2xl bg-stone-200 md:w-[calc(50%-12px)] lg:w-[calc(33.333%-16px)]"
               >
                 <img
                   src={service.image}
@@ -132,7 +132,7 @@ export default function Home() {
                   </h3>
                   <p className="mb-4 text-white/90">
                     {service.description}{" "}
-                    <span className="text-primary font-medium">
+                    <span className="text-accent font-medium">
                       {service.highlight}
                     </span>
                     {service.descriptionEnd}
