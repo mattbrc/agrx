@@ -23,8 +23,33 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "AG Rx | Healthcare & Wellness Clinic",
-  description: "Your trusted partner in personalized healthcare and wellness. Book your appointment today.",
+  title: "AG Rx | Performance Medicine for Men",
+  description:
+    "Testosterone optimization, peptide protocols, and weight management for high-performing men. Licensed providers in 44 states.",
+  metadataBase: new URL("https://agrxhealth.com"),
+  openGraph: {
+    title: "AG Rx | Performance Medicine for Men",
+    description:
+      "Testosterone optimization, peptide protocols, and weight management for high-performing men. Licensed providers in 44 states.",
+    url: "https://agrxhealth.com",
+    siteName: "AG Rx",
+    images: [
+      {
+        url: "/runner-shareable.png",
+        width: 1200,
+        height: 630,
+        alt: "AG Rx - Performance Medicine for Men",
+      },
+    ],
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "AG Rx | Performance Medicine for Men",
+    description:
+      "Testosterone optimization, peptide protocols, and weight management for high-performing men.",
+    images: ["/runner-shareable.png"],
+  },
 };
 
 export default function RootLayout({

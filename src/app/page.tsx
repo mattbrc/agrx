@@ -539,6 +539,54 @@ export default function Home() {
         </div>
       </section>
 
+      {/* Affiliate Section */}
+      {/* <section className="bg-muted/50 px-6 py-24">
+        <div className="mx-auto max-w-4xl text-center">
+          <p className="text-primary mb-4 text-sm font-semibold uppercase tracking-widest">
+            Want to Work With Us?
+          </p>
+          <h2 className="text-foreground mb-6 text-3xl font-bold sm:text-4xl">
+            Join Our Affiliate Program
+          </h2>
+          <p className="text-muted-foreground mx-auto mb-8 max-w-2xl text-lg">
+            Are you a coach, trainer, content creator, or community leader in the
+            fitness and wellness space? Partner with AG Rx and earn by referring
+            clients who share your commitment to performance optimization.
+          </p>
+          <ul className="mb-10 inline-block space-y-3 text-left">
+            <li className="flex items-center gap-3">
+              <span className="bg-primary h-2 w-2 rounded-full" />
+              <span className="text-muted-foreground">
+                Competitive commission structure
+              </span>
+            </li>
+            <li className="flex items-center gap-3">
+              <span className="bg-primary h-2 w-2 rounded-full" />
+              <span className="text-muted-foreground">
+                Dedicated affiliate support team
+              </span>
+            </li>
+            <li className="flex items-center gap-3">
+              <span className="bg-primary h-2 w-2 rounded-full" />
+              <span className="text-muted-foreground">
+                Marketing materials and tracking dashboard
+              </span>
+            </li>
+            <li className="flex items-center gap-3">
+              <span className="bg-primary h-2 w-2 rounded-full" />
+              <span className="text-muted-foreground">
+                Monthly payouts with no minimums
+              </span>
+            </li>
+          </ul>
+          <div>
+            <Button asChild size="lg">
+              <a href="mailto:affiliates@agrxhealth.com">Apply to Partner</a>
+            </Button>
+          </div>
+        </div>
+      </section> */}
+
       {/* Footer */}
       <footer className="bg-muted/50 border-border border-t px-6 py-16">
         <div className="mx-auto max-w-6xl">
