@@ -34,12 +34,12 @@ export default function Home() {
             >
               About
             </a>
-            <a
+            {/* <a
               href="#contact"
               className="text-muted-foreground hover:text-foreground transition-colors"
             >
               Contact
-            </a>
+            </a> */}
             <BookingWidget />
           </div>
           <div className="md:hidden">
