@@ -3,6 +3,7 @@
 import Script from "next/script";
 
 const CLINIC_ID = 16;
+// const CLINIC_ID=25; // localhost
 const GA_MEASUREMENT_ID = "G-QW1QL5HJ6B";
 const META_PIXEL_ID = "813481134551296";
 
@@ -23,6 +24,7 @@ export function EmrgScript() {
     <Script
       id="emrg-widget-script"
       src="https://joinemrg.com/widget.js"
+      // src="http://localhost:3000/widget.js"
       strategy="afterInteractive"
       onLoad={() => {
         if (window.emrgWidget) {

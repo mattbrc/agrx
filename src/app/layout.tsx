@@ -1,6 +1,8 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono, Figtree, Cormorant_Garamond } from "next/font/google";
 import { EmrgScript } from "@/components/emrg-script";
+import { SiteHeader } from "@/components/site-header";
+import { SiteFooter } from "@/components/site-footer";
 import "./globals.css";
 
 const figtree = Figtree({ subsets: ["latin"], variable: "--font-sans" });
@@ -62,7 +64,11 @@ export default function RootLayout({
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
-        {children}
+        <div className="bg-background min-h-screen">
+          <SiteHeader />
+          {children}
+          <SiteFooter />
+        </div>
         <EmrgScript />
       </body>
     </html>
