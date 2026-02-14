@@ -91,6 +91,7 @@ export default function Home() {
                 highlight: "testosterone optimization",
                 descriptionEnd: " to restore energy, strength, and drive.",
                 image: "/ski.JPG",
+                href: "/services/testosterone-therapy",
               },
               {
                 title: "Peptide Therapy",
@@ -98,6 +99,7 @@ export default function Home() {
                 highlight: "peptide protocols",
                 descriptionEnd: " for recovery, performance, and longevity.",
                 image: "/cycle-performance.JPG",
+                href: "/services/peptide-therapy",
               },
               {
                 title: "Weight Management",
@@ -105,6 +107,7 @@ export default function Home() {
                   "Custom medications for appetite suppression, glucose control, and",
                 highlight: "weight loss",
                 image: "/weightlifter.JPG",
+                href: "/services/weight-management",
               },
               {
                 title: "Sexual Wellness",
@@ -112,6 +115,7 @@ export default function Home() {
                 highlight: "sexual health",
                 descriptionEnd: ", endurance, and libido.",
                 image: "/jets.JPG",
+                href: "/services/sexual-wellness",
               },
               {
                 title: "Virtual Primary Care",
@@ -119,6 +123,7 @@ export default function Home() {
                 highlight: "ongoing care",
                 descriptionEnd: " and medication management.",
                 image: "/tree-moon.JPG",
+                href: "/services/virtual-primary-care",
               },
             ].map((service) => (
               <div
@@ -140,7 +145,9 @@ export default function Home() {
                     <span className="font-medium">{service.highlight}</span>
                     {service.descriptionEnd}
                   </p>
-                  <BookingWidget size="sm" buttonText="Book Now →" />
+                  <Button size="sm" asChild>
+                    <Link href={service.href}>Learn More &rarr;</Link>
+                  </Button>
                 </div>
               </div>
             ))}

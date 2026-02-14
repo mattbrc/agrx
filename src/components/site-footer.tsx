@@ -16,9 +16,7 @@ export function SiteFooter() {
 
           {/* Office Hours Column */}
           <div className="text-center sm:text-left">
-            <h4 className="text-foreground mb-4 font-semibold">
-              Office Hours
-            </h4>
+            <h4 className="text-foreground mb-4 font-semibold">Office Hours</h4>
             <ul className="text-muted-foreground space-y-1 text-sm">
               <li>Mon&ndash;Thu: 8:00 AM&ndash;5:00 PM EST</li>
               <li>Fri: 8:00 AM&ndash;3:00 PM EST</li>
@@ -85,7 +83,7 @@ export function SiteFooter() {
 
           {/* Copyright */}
           <p className="text-muted-foreground text-sm">
-            &copy; {new Date().getFullYear()} AG Rx. All rights reserved.
+            &copy; {new Date().getFullYear()} AG Rx Health. All rights reserved.
           </p>
         </div>
       </div>

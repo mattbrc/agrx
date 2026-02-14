@@ -3,11 +3,27 @@
 import { useState, useRef, useEffect } from "react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
+import { ChevronDownIcon } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { BookingWidget } from "@/components/booking-widget";
 import { ScrollingBanner } from "@/components/scrolling-banner";
+import {
+  DropdownMenu,
+  DropdownMenuTrigger,
+  DropdownMenuContent,
+  DropdownMenuItem,
+} from "@/components/ui/dropdown-menu";
 
 const PATIENT_PORTAL_URL = "https://joinemrg.com/patient-portal?clinicId=16";
+
+const SERVICE_LINKS = [
+  { label: "All Services", href: "/#services" },
+  { label: "Testosterone Therapy", href: "/services/testosterone-therapy" },
+  { label: "Peptide Therapy", href: "/services/peptide-therapy" },
+  { label: "Weight Management", href: "/services/weight-management" },
+  { label: "Sexual Wellness", href: "/services/sexual-wellness" },
+  { label: "Virtual Primary Care", href: "/services/virtual-primary-care" },
+];
 
 export function SiteHeader() {
   const pathname = usePathname();
@@ -47,12 +63,28 @@ export function SiteHeader() {
             >
               Home
             </Link>
-            <a
-              href={isHome ? "#services" : "/#services"}
-              className="text-muted-foreground hover:text-foreground transition-colors"
-            >
-              Services
-            </a>
+
+            {/* Services dropdown */}
+            <DropdownMenu>
+              <DropdownMenuTrigger asChild>
+                <button className="text-muted-foreground hover:text-foreground flex items-center gap-1 transition-colors">
+                  Services
+                  <ChevronDownIcon className="size-3.5" />
+                </button>
+              </DropdownMenuTrigger>
+              <DropdownMenuContent align="center" className="min-w-[200px]">
+                {SERVICE_LINKS.map((link) => (
+                  <DropdownMenuItem key={link.href} asChild>
+                    {link.href.startsWith("/#") ? (
+                      <a href={link.href}>{link.label}</a>
+                    ) : (
+                      <Link href={link.href}>{link.label}</Link>
+                    )}
+                  </DropdownMenuItem>
+                ))}
+              </DropdownMenuContent>
+            </DropdownMenu>
+
             <a
               href={isHome ? "#about" : "/#about"}
               className="text-muted-foreground hover:text-foreground transition-colors"
@@ -146,6 +178,61 @@ export function SiteHeader() {
                     >
                       Services
                     </a>
+                  ),
+                },
+                {
+                  content: (
+                    <Link
+                      href="/services/testosterone-therapy"
+                      onClick={() => setMobileOpen(false)}
+                      className={`${linkClass} pl-7 text-xs`}
+                    >
+                      Testosterone Therapy
+                    </Link>
+                  ),
+                },
+                {
+                  content: (
+                    <Link
+                      href="/services/peptide-therapy"
+                      onClick={() => setMobileOpen(false)}
+                      className={`${linkClass} pl-7 text-xs`}
+                    >
+                      Peptide Therapy
+                    </Link>
+                  ),
+                },
+                {
+                  content: (
+                    <Link
+                      href="/services/weight-management"
+                      onClick={() => setMobileOpen(false)}
+                      className={`${linkClass} pl-7 text-xs`}
+                    >
+                      Weight Management
+                    </Link>
+                  ),
+                },
+                {
+                  content: (
+                    <Link
+                      href="/services/sexual-wellness"
+                      onClick={() => setMobileOpen(false)}
+                      className={`${linkClass} pl-7 text-xs`}
+                    >
+                      Sexual Wellness
+                    </Link>
+                  ),
+                },
+                {
+                  content: (
+                    <Link
+                      href="/services/virtual-primary-care"
+                      onClick={() => setMobileOpen(false)}
+                      className={`${linkClass} pl-7 text-xs`}
+                    >
+                      Virtual Primary Care
+                    </Link>
                   ),
                 },
                 {
