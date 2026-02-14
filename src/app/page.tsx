@@ -34,20 +34,20 @@ export default function Home() {
               className="border-white/30 bg-white/10 text-white hover:bg-white/20"
               asChild
             >
-              <a href="#services">Learn More</a>
+              <a href="#services">Our Services</a>
             </Button>
           </div>
         </div>
       </section>
 
       {/* Our Story Section */}
-      <section className="px-6 py-24">
+      <section id="about" className="px-6 py-24">
         <div className="mx-auto max-w-4xl text-center">
           <p className="text-primary mb-4 text-sm font-semibold uppercase tracking-widest">
             Our Story
           </p>
           <h2 className="text-foreground mb-8 text-3xl font-bold sm:text-4xl">
-            Built by Men Who Get It
+            About Us
           </h2>
           <div className="text-muted-foreground space-y-6 text-lg leading-relaxed">
             <p>
@@ -279,7 +279,7 @@ export default function Home() {
       </section>
 
       {/* Why AG Rx Section */}
-      <section id="about" className="px-6 py-24">
+      <section className="px-6 py-24">
         <div className="mx-auto grid max-w-6xl items-center gap-12 lg:grid-cols-2">
           <div>
             <h2 className="text-foreground mb-6 text-3xl font-bold sm:text-4xl">
