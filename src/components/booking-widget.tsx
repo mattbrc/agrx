@@ -5,7 +5,7 @@ import { type VariantProps } from "class-variance-authority";
 import { buttonVariants } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
 
-const CLINIC_ID = 16;
+const CLINIC_ID = 29;
 // const CLINIC_ID=25; // localhost clinic
 
 interface BookingWidgetProps extends VariantProps<typeof buttonVariants> {
