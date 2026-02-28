@@ -4,7 +4,7 @@ import Script from "next/script";
 
 const CLINIC_ID = 16;
 // const CLINIC_ID=25; // localhost
-const GA_MEASUREMENT_ID = "G-QW1QL5HJ6B";
+const GA_MEASUREMENT_ID = "G-DHL2FR1J21";
 const META_PIXEL_ID = "813481134551296";
 
 declare global {
