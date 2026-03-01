@@ -5,6 +5,7 @@ import { EmrgScript } from "@/components/emrg-script";
 import { SiteHeader } from "@/components/site-header";
 import { SiteFooter } from "@/components/site-footer";
 import "./globals.css";
+import { Analytics } from "@vercel/analytics/next";
 
 const figtree = Figtree({ subsets: ["latin"], variable: "--font-sans" });
 
@@ -82,6 +83,7 @@ export default function RootLayout({
         <div className="bg-background min-h-screen">
           <SiteHeader />
           {children}
+          <Analytics />
           <SiteFooter />
         </div>
         <EmrgScript />
