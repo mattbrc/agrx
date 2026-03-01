@@ -5,7 +5,7 @@ import Script from "next/script";
 const CLINIC_ID = 16;
 // const CLINIC_ID=25; // localhost
 const GA_MEASUREMENT_ID = "G-DHL2FR1J21";
-const META_PIXEL_ID = "813481134551296";
+// const META_PIXEL_ID = "813481134551296";
 
 declare global {
   interface Window {
@@ -31,7 +31,7 @@ export function EmrgScript() {
           window.emrgWidget.init({
             clinicId: CLINIC_ID,
             gaMeasurementId: GA_MEASUREMENT_ID,
-            metaPixelId: META_PIXEL_ID,
+            // metaPixelId: META_PIXEL_ID,
           });
         }
       }}
