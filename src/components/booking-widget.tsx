@@ -15,7 +15,7 @@ interface BookingWidgetProps extends VariantProps<typeof buttonVariants> {
 
 declare global {
   interface Window {
-    launchEmrgWidget: (clinicId: number) => void;
+    launchEmrgWidget?: (clinicId: number) => void;
   }
 }
 
