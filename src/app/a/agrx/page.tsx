@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect } from "react";
+import { BookingWidget } from "@/components/booking-widget";
 
 const CLINIC_ID = 29;
 const AFFILIATE_CODE = "AGRX";
@@ -8,28 +9,22 @@ const GA_MEASUREMENT_ID = "G-DHL2FR1J21";
 
 export default function AgrxAffiliatePage() {
   useEffect(() => {
-    // Re-init widget with affiliate code, then auto-open
-    const tryLaunch = () => {
-      if (window.emrgWidget) {
-        window.emrgWidget.init({
-          clinicId: CLINIC_ID,
-          gaMeasurementId: GA_MEASUREMENT_ID,
-          affiliateCode: AFFILIATE_CODE,
-        });
-      }
-      if (window.launchEmrgWidget) {
-        window.launchEmrgWidget(CLINIC_ID);
-      }
-    };
-
-    // Widget script may not be loaded yet, retry briefly
-    if (window.emrgWidget && window.launchEmrgWidget) {
-      tryLaunch();
+    // Re-init widget with affiliate code
+    if (window.emrgWidget) {
+      window.emrgWidget.init({
+        clinicId: CLINIC_ID,
+        gaMeasurementId: GA_MEASUREMENT_ID,
+        affiliateCode: AFFILIATE_CODE,
+      });
     } else {
       const interval = setInterval(() => {
-        if (window.emrgWidget && window.launchEmrgWidget) {
+        if (window.emrgWidget) {
           clearInterval(interval);
-          tryLaunch();
+          window.emrgWidget.init({
+            clinicId: CLINIC_ID,
+            gaMeasurementId: GA_MEASUREMENT_ID,
+            affiliateCode: AFFILIATE_CODE,
+          });
         }
       }, 100);
       return () => clearInterval(interval);
@@ -45,9 +40,7 @@ export default function AgrxAffiliatePage() {
         <h1 className="text-foreground mb-4 text-4xl font-bold">
           Book With <span className="text-primary">AG Rx</span>
         </h1>
-        <p className="text-muted-foreground mb-8 text-lg">
-          Opening your booking form now...
-        </p>
+        <BookingWidget size="lg" buttonText="Book Appointment" />
       </div>
     </div>
   );
