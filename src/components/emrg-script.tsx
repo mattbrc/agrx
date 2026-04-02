@@ -14,6 +14,7 @@ declare global {
         clinicId: number;
         gaMeasurementId?: string;
         metaPixelId?: string;
+        affiliateCode?: string;
       }) => void;
     };
   }
