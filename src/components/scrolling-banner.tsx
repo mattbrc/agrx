@@ -52,15 +52,15 @@ export function ScrollingBanner() {
       {/* Scrolling marquee */}
       <div className="bg-primary text-primary-foreground flex h-9 overflow-hidden">
         {/* Static claim section */}
-        <div className="bg-primary flex shrink-0 items-center border-r border-primary-foreground/20 px-4 py-2">
+        <div className="bg-primary flex shrink-0 items-center border-r border-primary-foreground/20 px-4">
           <span className="text-sm font-medium whitespace-nowrap">
             Built for Operators
           </span>
         </div>
 
         {/* Scrolling content */}
-        <div className="overflow-hidden py-2">
-          <div className="marquee-scroll inline-flex">
+        <div className="flex flex-1 items-center overflow-hidden">
+          <div className="marquee-scroll inline-flex items-center">
             {content}
             {content}
           </div>
