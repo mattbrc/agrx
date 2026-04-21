@@ -1,11 +1,11 @@
 export function ScrollingBanner() {
   const items = [
-    "Affordable pricing with no hidden fees",
-    "Licensed Providers",
+    "Licensed US Providers",
     "Same-Day Appointments",
-    "US-Sourced Ingredients",
-    "Wellness Programs",
-    "100% online process",
+    "44 States",
+    "US-Compounded Medications",
+    "Transparent Pricing",
+    "100% Online Process",
   ];
 
   const content = (
@@ -31,11 +31,30 @@ export function ScrollingBanner() {
           }
         `}
       </style>
+
+      {/* MILITARY promo ribbon */}
+      <div className="bg-zinc-950 text-white flex h-9 items-center justify-center px-4">
+        <p className="text-center text-xs font-medium tracking-wide sm:text-sm">
+          <span className="mr-2" aria-hidden>
+            ★
+          </span>
+          <span className="hidden sm:inline">
+            Active Duty, Veterans &amp; First Responders —{" "}
+          </span>
+          <span className="sm:hidden">Military &amp; First Responders — </span>
+          10% off with code{" "}
+          <span className="text-primary-light font-bold tracking-widest">
+            MILITARY
+          </span>
+        </p>
+      </div>
+
+      {/* Scrolling marquee */}
       <div className="bg-primary text-primary-foreground flex h-9 overflow-hidden">
-        {/* Static "Why AG Rx?" section */}
+        {/* Static claim section */}
         <div className="bg-primary flex shrink-0 items-center border-r border-primary-foreground/20 px-4 py-2">
           <span className="text-sm font-medium whitespace-nowrap">
-            Why AG Rx?
+            Built for Operators
           </span>
         </div>
 

@@ -140,7 +140,7 @@ export default function SexualWellnessPage() {
   return (
     <>
       {/* ───── 1. Hero ───── */}
-      <section className="flex min-h-[60vh] items-center px-6 pt-32 pb-20">
+      <section className="flex min-h-[60vh] items-center px-6 pt-40 pb-20">
         <div className="mx-auto max-w-3xl text-center">
           <p className="text-primary mb-4 text-sm font-semibold uppercase tracking-widest">
             Sexual Wellness

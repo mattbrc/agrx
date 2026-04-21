@@ -165,7 +165,7 @@ export default function ProvidersPage() {
 
   return (
     <>
-      <section className="px-6 pt-32 pb-24">
+      <section className="px-6 pt-40 pb-24">
         <div className="mx-auto max-w-6xl">
           <div className="mb-12 text-center">
             <p className="text-primary mb-4 text-sm font-semibold uppercase tracking-widest">

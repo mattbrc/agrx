@@ -49,7 +49,7 @@ export function SiteHeader() {
         <ScrollingBanner />
       </div>
 
-      <header className="border-border/50 bg-background/80 fixed top-9 z-40 w-full border-b backdrop-blur-sm">
+      <header className="border-border/50 bg-background/80 fixed top-[72px] z-40 w-full border-b backdrop-blur-sm">
         <nav className="mx-auto flex max-w-6xl items-center justify-between px-6 py-3">
           <Link href="/" className="text-primary text-2xl font-bold">
             AG Rx
@@ -97,7 +97,7 @@ export function SiteHeader() {
             >
               Providers
             </Link>
-            <BookingWidget />
+            <BookingWidget variant="outline" />
             <Button variant="outline" size="default" asChild>
               <a
                 href={PATIENT_PORTAL_URL}
@@ -111,7 +111,7 @@ export function SiteHeader() {
 
           {/* Mobile: buttons + hamburger */}
           <div className="flex items-center gap-2 md:hidden">
-            <BookingWidget buttonText="Book" size="sm" />
+            <BookingWidget buttonText="Book" size="sm" variant="outline" />
             <button
               onClick={() => setMobileOpen(!mobileOpen)}
               className="text-foreground flex h-8 w-8 items-center justify-center"

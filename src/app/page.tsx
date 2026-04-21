@@ -8,35 +8,47 @@ export default function Home() {
   return (
     <>
       {/* Hero Section */}
-      <section className="relative flex min-h-screen items-center justify-center px-6 pt-28">
+      <section className="relative flex min-h-screen items-center justify-center px-6 pt-36">
         <div
           className="absolute inset-0 bg-cover bg-center bg-no-repeat"
           style={{ backgroundImage: "url('/western-runner.jpeg')" }}
         />
-        <div className="absolute inset-0 bg-black/40 md:bg-black/20" />
+        <div className="absolute inset-0 bg-gradient-to-b from-black/10 via-black/60 to-black/40" />
         <div className="relative z-10 mx-auto max-w-4xl text-center [text-shadow:_0_2px_12px_rgb(0_0_0_/_40%)]">
-          <h1 className="font-heading mb-6 text-4xl font-bold italic tracking-tight text-white sm:text-5xl lg:text-6xl">
-            Live Better With <span className="text-primary-light">AG Rx</span>
+          <h1 className="mb-6 text-4xl font-bold tracking-tight text-white sm:text-5xl lg:text-6xl">
+            Performance Medicine, Built for Operators.
           </h1>
-          <p className="mx-auto mb-2 max-w-2xl text-lg text-white/90">
-            Testosterone optimization, peptide protocols, and weight management
-            designed for high performing individuals.
-          </p>
           <p className="mx-auto mb-8 max-w-2xl text-lg text-white/90">
-            Delivered by top telehealth providers.
+            Testosterone, peptides, and weight management. Delivered by licensed
+            providers in 44 states.
           </p>
 
           <div className="flex flex-col items-center gap-4 sm:flex-row sm:justify-center">
-            <BookingWidget size="lg" />
+            <BookingWidget size="lg" buttonText="Start Free Consult" />
             <Button
               variant="outline"
               size="lg"
               className="border-white/30 bg-white/10 text-white hover:bg-white/20"
               asChild
             >
-              <a href="#services">Our Services</a>
+              <a href="#how-it-works">How It Works</a>
             </Button>
           </div>
+
+          <p className="mt-6 text-sm text-white/85">
+            <span className="mx-2" aria-hidden>
+              ✦
+            </span>
+            HIPAA compliant
+            <span className="mx-2" aria-hidden>
+              ·
+            </span>
+            Board-certified providers
+            <span className="mx-2" aria-hidden>
+              ·
+            </span>
+            No long-term commitments
+          </p>
         </div>
       </section>
 
@@ -156,7 +168,7 @@ export default function Home() {
       </section>
 
       {/* How It Works Section */}
-      <section className="px-6 py-24">
+      <section id="how-it-works" className="px-6 py-24">
         <div className="mx-auto max-w-6xl">
           <div className="mb-16 text-center">
             <p className="text-primary mb-4 text-sm font-semibold uppercase tracking-widest">
@@ -285,6 +297,71 @@ export default function Home() {
         </div>
       </section>
 
+      {/* Meet Your Providers Teaser */}
+      <section className="px-6 py-24">
+        <div className="mx-auto max-w-6xl">
+          <div className="mb-12 text-center">
+            <p className="text-primary mb-4 text-sm font-semibold uppercase tracking-widest">
+              Your Care Team
+            </p>
+            <h2 className="text-foreground mb-4 text-3xl font-bold sm:text-4xl">
+              Board-Certified Providers Who Understand Optimization
+            </h2>
+            <p className="text-muted-foreground mx-auto max-w-2xl text-lg">
+              Emergency medicine, endocrinology, cardiology, and nephrology —
+              our providers average over a decade of clinical experience.
+            </p>
+          </div>
+
+          <div className="mb-12 grid grid-cols-2 gap-6 lg:grid-cols-4">
+            {[
+              {
+                name: "Dr. David Lawrence",
+                title: "Founder & CMO",
+                image: "/providers/david-lawrence.png",
+              },
+              {
+                name: "Dr. Daniel Bennett",
+                title: "Emergency Medicine, MD",
+                image: "/providers/daniel-bennett.png",
+              },
+              {
+                name: "Dr. Lynda A. Szczech",
+                title: "Nephrology, MD",
+                image: "/providers/lynda-szczech.png",
+              },
+              {
+                name: "Victoria Murias",
+                title: "Endocrinology, PA-C",
+                image: "/providers/victoria-murias.png",
+              },
+            ].map((p) => (
+              <div key={p.name} className="text-center">
+                <div className="bg-muted relative mb-4 aspect-[3/4] w-full overflow-hidden rounded-2xl">
+                  <Image
+                    src={p.image}
+                    alt={p.name}
+                    fill
+                    sizes="(max-width: 640px) 50vw, (max-width: 1024px) 33vw, 25vw"
+                    className="object-cover object-top"
+                  />
+                </div>
+                <h3 className="text-foreground text-base font-semibold">
+                  {p.name}
+                </h3>
+                <p className="text-muted-foreground text-sm">{p.title}</p>
+              </div>
+            ))}
+          </div>
+
+          <div className="text-center">
+            <Button variant="outline" size="lg" asChild>
+              <Link href="/providers">Meet All Providers &rarr;</Link>
+            </Button>
+          </div>
+        </div>
+      </section>
+
       {/* Why AG Rx Section */}
       <section className="px-6 py-24">
         <div className="mx-auto grid max-w-6xl items-center gap-12 lg:grid-cols-2">
@@ -331,9 +408,7 @@ export default function Home() {
                 </span>
               </li>
             </ul>
-            <Button asChild>
-              <Link href="/providers">Our Providers</Link>
-            </Button>
+            <BookingWidget buttonText="Start Free Consult" />
           </div>
           <div className="hidden lg:block">
             <img

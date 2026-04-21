@@ -32,7 +32,7 @@ export default function AgrxAffiliatePage() {
   }, []);
 
   return (
-    <div className="flex min-h-screen items-center justify-center px-6 pt-28">
+    <div className="flex min-h-screen items-center justify-center px-6 pt-36">
       <div className="mx-auto max-w-2xl text-center">
         <p className="text-primary mb-4 text-sm font-semibold uppercase tracking-widest">
           Affiliate Partner
