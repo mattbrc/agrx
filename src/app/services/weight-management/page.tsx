@@ -205,7 +205,7 @@ const faqs = [
   {
     question: "Is this covered by insurance?",
     answer:
-      "We do not accept insurance, but we do accept HSA and FSA accounts as well as CareCredit. Our transparent cash-pay pricing means no surprise bills or insurance headaches.",
+      "We do not accept insurance. Our transparent cash-pay pricing means no surprise bills or insurance headaches.",
   },
 ];
 

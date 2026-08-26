@@ -155,7 +155,7 @@ const faqs = [
   {
     question: "Is Testosterone Therapy covered by insurance?",
     answer:
-      "We do not accept insurance, but we do accept HSA and FSA accounts as well as CareCredit. Our transparent cash-pay pricing means no surprise bills or insurance headaches.",
+      "We do not accept insurance. Our transparent cash-pay pricing means no surprise bills or insurance headaches.",
   },
   {
     question: "What\u2019s the difference between TRT and Enclomiphene?",
@@ -204,11 +204,6 @@ const trustSignals = [
     title: "Ongoing Provider Support",
     description:
       "Real follow-ups with your provider \u2014 not a chatbot. Available when you need them.",
-  },
-  {
-    title: "HSA / FSA Accepted",
-    description:
-      "Use your pre-tax health accounts. We also accept CareCredit financing.",
   },
 ];
 

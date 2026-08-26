@@ -121,7 +121,7 @@ const faqs = [
   {
     question: "Will you bill my insurance?",
     answer:
-      "We do not accept any form of insurance. There is no insurance co-pay. Our services are $125 per visit for Adult Virtual Primary Care and $95 for Pediatric Virtual Primary Care. We do accept HSA and FSA accounts as well as CareCredit.",
+      "We do not accept any form of insurance. There is no insurance co-pay. Our services are $125 per visit for Adult Virtual Primary Care and $95 for Pediatric Virtual Primary Care.",
   },
 ];
 
@@ -266,7 +266,7 @@ export default function VirtualPrimaryCarePage() {
                 </div>
               </div>
               <p className="text-muted-foreground text-xs">
-                No insurance needed. HSA/FSA &amp; CareCredit accepted.
+                Simple, transparent cash-pay pricing.
               </p>
             </div>
           </div>

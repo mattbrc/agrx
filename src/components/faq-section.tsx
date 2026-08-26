@@ -37,7 +37,7 @@ const faqs: FaqItem[] = [
   {
     question: "Do you accept insurance?",
     answer:
-      "We do not accept insurance, but we do accept HSA and FSA accounts as well as CareCredit. Inform your provider if you plan on using any of the above, and we will help you set that up.",
+      "We do not accept insurance. Our transparent cash-pay pricing means no surprise bills or insurance headaches.",
   },
   {
     question: "How often will I need follow-up appointments?",
